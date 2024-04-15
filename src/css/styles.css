@@ -39,9 +39,11 @@ form {
   height: 40px;
 }
 
-.search-btn:hover {
+.search-btn:hover,
+.load-btn:hover {
   background: #6c8cff;
 }
+
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
