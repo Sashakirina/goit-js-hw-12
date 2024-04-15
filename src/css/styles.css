@@ -1,25 +1,111 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
-
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+form {
+  display: flex;
+  padding: 36px 0px 32px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #808080;
+  font-family: Montserrat;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
+  letter-spacing: 0.64px;
+}
+
+.search-input {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+.search-input:hover {
+  border: 1px solid #000;
+}
+.search-input:active {
+  color: #2e2f42;
+  border: 1px solid #4e75ff;
+}
+
+.search-btn,
+.load-btn {
+  color: #fff;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  width: 91px;
+  height: 40px;
+}
+
+.search-btn:hover {
+  background: #6c8cff;
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  width: 360px;
+  height: 200px;
+  border: 1px solid #808080;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+}
+
+.img-info {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background-color: #fff;
+  width: 358px;
+  height: 48px;
+  margin-top: -48px;
+}
+
+.item-info {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33em;
+  letter-spacing: 0.48px;
+}
+
+.info-value {
+  display: block;
   font-weight: 400;
+  line-height: 2em;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+.loader {
+  color: #4e75ff;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0.64px;
+  display: none;
+  text-align: center;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.load-btn {
+  display: none;
+  width: 125px;
+  margin: 32px auto 52px auto;
+}
+
+.isactive {
+  display: block;
 }
