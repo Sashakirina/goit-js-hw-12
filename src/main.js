@@ -24,6 +24,7 @@ async function handleSubmit(event) {
   userSearch = event.currentTarget.search.value.trim();
 
   try {
+    page = 1;
     const data = await getImges(userSearch, page);
 
     if (!data.hits.length) {
@@ -53,7 +54,7 @@ async function handleClick(event) {
     const data = await getImges(userSearch, page);
     gallery.insertAdjacentHTML('beforeend', createMarkup(data.hits));
 
-    if (page < data.totalHits / page) {
+    if (page < data.totalHits / 15) {
       loadingBtn.classList.add('isactive');
     } else {
       iziToast.info({
